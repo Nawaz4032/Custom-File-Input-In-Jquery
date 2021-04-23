@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Home</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 class="text-center">Custom File Input</h2>
+
+<div class="custom-file-wrp">
+	<div class="filename">
+		Ex:sample.jpg
+	</div>
+	<div class="custom-file">
+		<label for="fileupload">Upload</label>
+		<input type="file"  id="fileupload">
+	</div>
+</div>
+
+
+
+
+<script src="js/jquery-latest.min.js"></script>
+<script>
+	//now will select file name and print in div tag.
+	//for this you need to pass parameter
+	//will check in console first.
+	// you have to go in target than file property
+	$(function()
+	{
+		$("#fileupload").change(function(event) {
+			var x = event.target.files[0].name
+			$(".filename").text(x)
+		});
+	})
+</script>
+</body>
+</html>
